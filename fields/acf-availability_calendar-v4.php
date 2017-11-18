@@ -119,7 +119,7 @@ class acf_field_availability_calendar extends acf_field {
 
 		// create Field HTML
 		?>
-		<div id="gk-calendar">
+		<div id="gk-calendar" class="frontend-calendar">
 			<div id="gk-multidatepicker"></div>
 			<input type="hidden" id="gk-temp-dates">
 			<input type="hidden" name="<?php echo $available_dates_name; ?>" value="<?php echo $available_dates_value; ?>" id="gk-available-dates">

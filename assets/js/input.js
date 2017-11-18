@@ -7,6 +7,7 @@
 			dateFormat: "y-m-d",
 			altField: '#gk-temp-dates',
 			numberOfMonths: 3,
+			disabled: true,
 			onSelect: function(dateText, obj) {
 				$('#gk-available-dates').val( $('#gk-temp-dates').val() );
 			}

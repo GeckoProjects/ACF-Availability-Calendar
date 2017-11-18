@@ -10,3 +10,24 @@ table.ui-datepicker-calendar {border-collapse: separate;}
 	background: #743620 none;
 	color: white;
 }
+
+#gk-calendar{
+  text-align:center;
+}
+
+#gk-calendar #gk-multidatepicker{
+  display:inline-block;
+}
+
+.frontend-calendar .ui-state-disabled{
+  opacity:1 !important;
+}
+
+.frontend-calendar .ui-state-highlight{
+  border-color:#f03
+}
+
+.frontend-calendar .ui-state-highlight span{
+  background-color:#f03;
+  color:#FFF;
+}
