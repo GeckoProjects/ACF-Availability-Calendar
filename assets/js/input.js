@@ -2,20 +2,19 @@
 
 
 	function initialize_field( $el ) {
-
 		//$el.doStuff();
-		$('#mdp').multiDatesPicker({
+		$('#gk-multidatepicker').multiDatesPicker({
 			dateFormat: "y-m-d",
-			altField: '#altField',
+			altField: '#gk-temp-dates',
 			numberOfMonths: 3,
 			onSelect: function(dateText, obj) {
-				$('#available-dates').val( $('#altField').val() );
+				$('#gk-available-dates').val( $('#gk-temp-dates').val() );
 			}
 		});
 
-		if( $('#available-dates').val().trim() != '' ) {
-			var dates = $('#available-dates').val().replace(/\s/g, '').split(',');
-			$('#mdp').multiDatesPicker('addDates', dates);
+		if( $('#gk-available-dates').val().trim() != '' ) {
+			var dates = $('#gk-available-dates').val().replace(/\s/g, '').split(',');
+			$('#gk-multidatepicker').multiDatesPicker('addDates', dates);
 		}
 	}
 
@@ -39,7 +38,7 @@
 		acf.add_action('ready append', function( $el ){
 
 			// search $el for fields of type 'FIELD_NAME'
-			acf.get_fields({ type : 'FIELD_NAME'}, $el).each(function(){
+			acf.get_fields({ type : 'availability_calendar'}, $el).each(function(){
 
 				initialize_field( $(this) );
 
@@ -68,7 +67,7 @@
 
 		$(document).on('acf/setup_fields', function(e, postbox){
 
-			$(postbox).find('.field[data-field_type="FIELD_NAME"]').each(function(){
+			$(postbox).find('.field[data-field_type="availability_calendar"]').each(function(){
 
 				initialize_field( $(this) );
 

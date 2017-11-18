@@ -1,9 +1,9 @@
 <?php
 
 /*
-Plugin Name: Advanced Custom Fields: FIELD_LABEL
+Plugin Name: Advanced Custom Fields: Availability Calendar
 Plugin URI: PLUGIN_URL
-Description: SHORT_DESCRIPTION
+Description: Availability Calendar Add on for Advanced Custom Fields
 Version: 1.0.0
 Author: AUTHOR_NAME
 Author URI: AUTHOR_URL

@@ -28,8 +28,8 @@ class acf_field_availability_calendar extends acf_field {
 	{
 		// vars
 		$this->name = 'availability_calendar';
-		$this->label = __('FIELD_LABEL');
-		$this->category = __("Basic",'acf'); // Basic, Content, Choice, etc
+		$this->label = __('Availability Calendar');
+		$this->category = __("Content",'acf'); // Basic, Content, Choice, etc
 		$this->defaults = array(
 			'available_dates' => ''
 		);
@@ -119,9 +119,11 @@ class acf_field_availability_calendar extends acf_field {
 
 		// create Field HTML
 		?>
-		<div id="mdp"></div>
-		<input type="text" id="altField">
-		<input type="text" name="<?php echo $available_dates_name; ?>" value="<?php echo $available_dates_value; ?>" id="available-dates">
+		<div id="gk-calendar">
+			<div id="gk-multidatepicker"></div>
+			<input type="hidden" id="gk-temp-dates">
+			<input type="hidden" name="<?php echo $available_dates_name; ?>" value="<?php echo $available_dates_value; ?>" id="gk-available-dates">
+		</div>
 		<?php
 	}
 
