@@ -71,28 +71,6 @@ class acf_field_availability_calendar extends acf_field {
 
 		// Create Field Options HTML
 		?>
-<tr class="field_option field_option_<?php echo $this->name; ?>">
-	<td class="label">
-		<label><?php _e("Preview Size",'acf'); ?></label>
-		<p class="description"><?php _e("Thumbnail is advised",'acf'); ?></p>
-	</td>
-	<td>
-		<?php
-
-		do_action('acf/create_field', array(
-			'type'		=>	'radio',
-			'name'		=>	'fields['.$key.'][preview_size]',
-			'value'		=>	$field['preview_size'],
-			'layout'	=>	'horizontal',
-			'choices'	=>	array(
-				'thumbnail' => __('Thumbnail'),
-				'something_else' => __('Something Else'),
-			)
-		));
-
-		?>
-	</td>
-</tr>
 		<?php
 
 	}
@@ -119,7 +97,7 @@ class acf_field_availability_calendar extends acf_field {
 
 		// create Field HTML
 		?>
-		<div id="gk-calendar" class="frontend-calendar">
+		<div id="gk-calendar">
 			<div id="gk-multidatepicker"></div>
 			<input type="hidden" id="gk-temp-dates">
 			<input type="hidden" name="<?php echo $available_dates_name; ?>" value="<?php echo $available_dates_value; ?>" id="gk-available-dates">
